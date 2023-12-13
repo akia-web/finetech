@@ -11,7 +11,7 @@ def getSentiment(text):
         return 'negatif'
     
 def searchWordInSetence(sentence):
-    search = ["schneider", "bitcoin", "btc", "sika", "cac40", "gold"]
+    search = ["schneider", "bitcoin", "btc", "sika", "cac40",]
     for word in search:
         if word in sentence:
             return word
