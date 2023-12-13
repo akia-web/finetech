@@ -1,13 +1,7 @@
-.header  {
+.App {
   text-align: center;
-  margin-top: 15px;
-  padding: 0px 10px;
 }
 
-.HeroBanner {
-  text-align: center;
-  margin-top: 150px;
-}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
