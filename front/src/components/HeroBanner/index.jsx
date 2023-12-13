@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+// import React from 'react';
 import './style.css'
 
+
+
 export default function HeroBanner() {
+    const [numberArticle, setNumberArticle] = useState(1);
+    const [positiveArticle, setPositiveArticle] = useState(1);
+    const [negativeArticle, setNegativeArticle] = useState(0);
+   
+   
 return (
 <div className="flex flex-col justify-between gap-24 w-full items-start hero text-center">
     <div className="flex flex-col gap-5 w-full text-center items-center">
@@ -17,36 +25,25 @@ return (
             <div className="relative flex flex-row w-full items-start">
                 <div id="NombreDarticlesEnH"
                     className="text-right text-3xl font-sans text-[#131722] absolute top-[177px] left-32 h-10 w-[356px] mt-2">
-                    Nombre d’articles en 24h{" "}
+                    Nombre d’articles en 24h
                 </div>
                 <div
                     className="text-right text-[150px] font-sans font-black text-[#2962ff] absolute top-5 left-24 h-[176px] w-[349px]">
-                    1587
+                    {numberArticle}
                 </div>
                 <img src="https://file.rendit.io/n/PIqfOB0RPYNjPdv1yTrx.svg" alt="AvForward5 icon" id="Avgpace"
                     className="relative" />
             </div>
-            <div className="flex flex-col justify-between ml-24 gap-2 w-1/2 items-start">
-                <div className="flex flex-row gap-4 w-full items-start">
-                    <img src="https://file.rendit.io/n/OHB0aOCFEXxBB60mObtQ.svg" alt="Avgpace1" id="Avgpace1"
-                        className="w-6" />
-                    <div className="text-xl font-sans text-[#6b6d78] mt-px">
-                        Neutre, sans impact
-                    </div>
+            <div className="flex flex-row justify-between ml-24 gap-2 w-1/2 items-start">
+                <div className="circle">
+                    {negativeArticle}
+                    <br />
+                    Negatifs
                 </div>
-                <div className="flex flex-row gap-5 w-2/3 items-start">
-                    <img src="https://file.rendit.io/n/v3O7Pu5FQLRbkbeZHDXr.svg" alt="Avgpace2" id="Avgpace2"
-                        className="w-6" />
-                    <div className="text-right text-xl font-sans text-[#6b6d78]">
-                        Avis positif
-                    </div>
-                </div>
-                <div className="flex flex-row gap-5 w-3/4 items-start">
-                    <img src="https://file.rendit.io/n/q1sSn7wmFuazjKS4tLiG.svg" alt="Avgpace3" id="Avgpace3"
-                        className="w-6" />
-                    <div id="AvisNgatifs" className="text-xl font-sans text-[#6b6d78] mt-px">
-                        Avis négatifs{" "}
-                    </div>
+                <div className="circle">
+                    {positiveArticle}
+                    <br />
+                    Positifs
                 </div>
             </div>
         </div>
@@ -58,12 +55,6 @@ return (
                     <img src="https://file.rendit.io/n/tNw2wKYUw865Ld7mCWqu.svg" alt="MaskGroup" className="ml-12" />
                     <img src="https://file.rendit.io/n/pjfscRudNQaN99ZJzfPm.svg" alt="ClipPathGroup" />
                 </div>
-            </div>
-            <div
-                className="text-center text-xl font-sans border-solid border-[#2a8173] bg-[#d9d9d9] relative flex flex-row justify-center mt-[431px] pt-6 w-1/5 h-[110px] items-start border-2 rounded-lg">
-                Besoin d’un
-                <br />
-                conseil
             </div>
         </div>
     </div>

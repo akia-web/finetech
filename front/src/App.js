@@ -1,5 +1,6 @@
 import './App.css';
 import HeroBanner from './components/HeroBanner';
+import Home from './components/Home';
 import Info from './components/Info';
 import NavBar from './components/NavBar';
 
@@ -12,9 +13,13 @@ function App() {
     <div className='HeroBanner'>
     <HeroBanner />
     </div>
-    <div>
+
+    {/* <div>
+      <Home />
+    </div> */}
+    {/* <div>
       <Info />
-    </div>
+    </div> */}
     </>
   );
 }

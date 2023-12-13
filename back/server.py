@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
+from flask_cors import CORS 
 from article import getarticles
 
 app = Flask(__name__)
+CORS(app)
 
 totalArticle = 0
 totalNegatifArticle = 0
