@@ -116,10 +116,10 @@ return (
             </div>
         </div>
     </div>
-    <div id="ContinuezLire1" className="bg-white/0 flex flex-row justify-center pt-px gap-2 w-1/6 items-start">
-        <div id="ContinuezLire" className="text-xl font-sans text-[#2962ff] mt-0">
+    <div id="ContinuezLire1" className="bg-white/0 flex flex-row justify-center pt-px gap-2 w-1/6 items-start ">
+        <a href="/" id="ContinuezLire" className="text-xl font-sans text-[#2962ff] mt-0">
             Continuez à lire{" "}
-        </div>
+        </a>
         <img src="https://file.rendit.io/n/6Bmqv67VM9rd3zgMY1TE.svg" alt="Arrowforwardios" id="Arrowforwardios"
             className="mb-px w-6" />
     </div>
