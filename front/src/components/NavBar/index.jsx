@@ -10,27 +10,27 @@ return (
         <div className="bg-[#f1f3fa] flex flex-row gap-2 w-1/5 h-10 items-start pt-2 px-3 rounded-[20px]">
             <img src="https://file.rendit.io/n/51DQ1d3S5GT6FJxgyHar.svg" alt="Search" id="Search" className="w-6" />
             <div className="text-right font-sans tracking-[0.96] text-[#6b6d78] mt-1">
-                Chercher
+                <span> Chercher </span>
             </div>
         </div>
-        <div className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
-            Produits<span> </span>
-        </div>
-        <div className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
-            Communauté
-        </div>
-        <div className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
-            Marchés<span> </span>
-        </div>
-        <div className="text-right font-sans tracking-[0.96] text-[#2962ff] mt-3">
-            Actualités<span> </span>
-        </div>
-        <div className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
-            Courtiers
-        </div>
-        <div className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
-            Plus<span> </span>
-        </div>
+        <a  href="/" className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
+            <span> Produits </span>
+        </a>
+        <a  href="/" className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
+            <span> Communauté </span>
+        </a>
+        <a href="/" className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
+            <span> Marchés </span>
+        </a>
+        <a href="/" className="text-right font-sans tracking-[0.96] text-[#2962ff] mt-3">
+            <span> Actualités </span>
+        </a>
+        <a href="/" className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
+        <span> Courtiers </span>
+        </a>
+        <a href="/" className="text-right font-sans tracking-[0.96] text-[#131722] mt-3">
+        <span>  Plus </span>
+        </a>
     </div>
     <div className="flex flex-row gap-2 w-1/6 items-start">
         <img src="https://file.rendit.io/n/nb6QIUreNNjCsfWStKXe.svg" alt="ActionPermIdentity icon" id="Person"
