@@ -1,5 +1,6 @@
 import requests
 import feedparser
+import requests
 from textblob import TextBlob
 from textblob_fr import PatternTagger, PatternAnalyzer
 
@@ -11,14 +12,20 @@ def getSentiment(text):
         return 'negatif'
     
 def searchWordInSetence(sentence):
-    search = ["schneider", "bitcoin", "btc", "sika", "cac40",]
+    search = ["schneider", "bitcoin", "btc", "sika"]
     for word in search:
         if word in sentence:
             return word
 
 
+def getText(description, title):
+    if '<a' in description:
+        return title
+    else:
+        return description
 
 def getarticles():
+
     infoArticle = []
     tableauFluxRss = [
     'https://www.abcbourse.com/rss/displaynewsrss', 
@@ -56,8 +63,9 @@ def getarticles():
                             doPush = True    
                 else:
                     doPush = True            
-
-                blob = TextBlob(entry.description, pos_tagger=PatternTagger(), analyzer=PatternAnalyzer())
+                
+                text = getText(entry.description, entry.title)
+                blob = TextBlob(text, pos_tagger=PatternTagger(), analyzer=PatternAnalyzer())
                 sentiment = getSentiment(blob.sentiment[0])
                 if sentiment == 'positif':
                     statisques['totalPositifArticle'] += 1

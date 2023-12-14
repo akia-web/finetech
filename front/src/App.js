@@ -13,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:action" element={<HeroBanner />} />
       </Routes>
     </BrowserRouter>
     {/* <div className="header">
