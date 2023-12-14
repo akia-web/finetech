@@ -5,7 +5,6 @@ import HeroBanner from './components/HeroBanner';
 
 
 import Info from './components/Info';
-import NavBar from './components/NavBar';
 
 function App() {
   return (
@@ -16,19 +15,6 @@ function App() {
         <Route path="/:action" element={<HeroBanner />} />
       </Routes>
     </BrowserRouter>
-    {/* <div className="header">
-      <NavBar />
-    </div>
-    <div className='HeroBanner'>
-    <HeroBanner />
-    </div> */}
-
-    {/* <div>
-      <Home />
-    </div> */}
-    {/* <div>
-      <Info />
-    </div> */}
     </div>
   );
 }
