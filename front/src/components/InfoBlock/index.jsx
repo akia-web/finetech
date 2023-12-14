@@ -8,14 +8,13 @@ return (
         <img src={Logoschneider} alt="Image7" id="Image7" className="w-12" />
         <div className="flex flex-col mt-2 gap-1 w-5/6 items-start">
             <div id="IlYAMinutesAFP13" className="text-xl font-sans text-[#6b6d78]">
-                Il y a {props.time} minutes
-                AFP<span className="text-2xl"> </span>
+              {props.time} 
             </div>
             <div className="text-2xl font-sans font-medium">
-                {props.info}
+                {props.title}
             </div>
             <div id="ContinuezLire1" className="bg-white/0 flex flex-row justify-center pt-px gap-2 items-start ">
-                <a href={props.url} id="ContinuezLire" className="text-xl font-sans text-[#2962ff] mt-0">
+                <a href={props.link} id="ContinuezLire" className="text-xl font-sans text-[#2962ff] mt-0">
                     en savoir plus
                 </a>
               

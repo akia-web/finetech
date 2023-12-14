@@ -41,8 +41,8 @@ def getarticles():
     for entryFlux in tableauFluxRss:
         getFlux = requests.get(entryFlux, verify=False)
         news_feed = feedparser.parse(getFlux.text)
-        print(news_feed)
         for entry in news_feed.entries:
+            print(entry.published)
             statisques = {
                 'name': '',
                 'totalArticle' : 0,
@@ -71,9 +71,12 @@ def getarticles():
                     statisques['totalPositifArticle'] += 1
                 else:
                     statisques['totalNegatifArticle'] += 1
+                date = entry.published
+                cuteDate = date.find("2023")
+                trimmed_string = date[:cuteDate + 4]
                 statisques['name']= isWordInSentence
                 statisques['totalArticle'] += 1
-                statisques['articles'].append({'title': entry.title, 'description': entry.description, 'link':entry.link})
+                statisques['articles'].append({'title': entry.title, 'description': entry.description, 'link':entry.link, "time": trimmed_string})
                 if doPush:
                     infoArticle.append(statisques)
                 print(infoArticle)

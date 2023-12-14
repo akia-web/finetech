@@ -5,10 +5,12 @@ import HeroBanner from './components/HeroBanner';
 
 
 import Info from './components/Info';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div>
+      <NavBar></NavBar>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />

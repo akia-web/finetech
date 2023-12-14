@@ -3,14 +3,29 @@
     margin: 0 auto;
 }
 
+h1{
+    margin: 2em auto  0 !important;
+    font-size: 2em !important;
+}
+
 .circle{
     border-radius: 50%;
     color: white;
     font-weight: 800;
     width: 100px;
     height: 100px;
+    text-align: center;
 }
 
+.numberArticle{
+    font-size: 100px;
+    text-align: center;
+    color: #2828dd;
+}
+
+.container-stat{
+    margin-top: 7em;
+}
 .positive{
     background-color: #2A8173;
 }
@@ -34,13 +49,15 @@
 }
 
 .left{
-    background-color: red;
     width: 45%;
 }
 
 .right{
-    background-color: pink;
     width: 50%;
+}
+
+.right img{
+    height: 300px;
 }
 
 .height-100{
