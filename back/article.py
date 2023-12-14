@@ -1,10 +1,10 @@
+import requests
 import feedparser
 from textblob import TextBlob
 from textblob_fr import PatternTagger, PatternAnalyzer
 
 
 def getSentiment(text):
-
     if text>0:
        return 'positif'
     else:
@@ -32,7 +32,9 @@ def getarticles():
     ]
 
     for entryFlux in tableauFluxRss:
-        news_feed = feedparser.parse(entryFlux)
+        getFlux = requests.get(entryFlux, verify=False)
+        news_feed = feedparser.parse(getFlux.text)
+        print(news_feed)
         for entry in news_feed.entries:
             statisques = {
                 'name': '',

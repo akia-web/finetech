@@ -1,13 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import  Home  from "./pages/Home"
+import  Home  from "./components/Home"
 import './App.css';
+import HeroBanner from './components/HeroBanner';
+
+
+import Info from './components/Info';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div>
     <BrowserRouter>
       <Routes>
-        <Route index element={ <Home /> }/>
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
     {/* <div className="header">
@@ -15,6 +20,13 @@ function App() {
     </div>
     <div className='HeroBanner'>
     <HeroBanner />
+    </div> */}
+
+    {/* <div>
+      <Home />
+    </div> */}
+    {/* <div>
+      <Info />
     </div> */}
     </div>
   );
