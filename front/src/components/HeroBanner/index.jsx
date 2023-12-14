@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import './style.css'
 import { selectedAction } from "../../functions/api";
-import statistique from '../../assets/statistiques.png'
+import statistiqueSchneider from '../../assets/statistiques-schneider.png'
+import statistiqueBitcoin from '../../assets/statistiques-bitcoins.png'
 import InfoBlock from "../InfoBlock";
 
 
 
 export default function HeroBanner() {
-    console.log(selectedAction)
+    if(!selectedAction){
+        window.location.href = '/'
+    }
     const [numberArticle, setNumberArticle] = useState(selectedAction.totalArticle);
     const [positiveArticle, setPositiveArticle] = useState(selectedAction.totalPositifArticle);
     const [negativeArticle, setNegativeArticle] = useState(selectedAction.totalNegatifArticle);
@@ -26,17 +29,31 @@ export default function HeroBanner() {
         return number > comparaison 
     }   
    
+    const getStatistiqueImage = (name) =>{
+        switch (name){
+            case 'schneider':
+                return statistiqueSchneider
+            case 'bitcoin': 
+                return statistiqueBitcoin
+        }
+    }
 return (
 
 <div className="container-page">
+    
+        <a href="/" className="buttonLink"> 
+            <div className="flex items-center buttonLink ">
+                <span className="material-symbols-outlined">arrow_back</span> <span>Retour</span>
+            </div>
+        </a>
 
-    <div className="flex flex-col gap-5 w-full text-center items-center">
-        <h1 className="text-[93px] font-sans font-bold text-[#131722]" >
+    <div className="flex flex-col w-full text-center items-center">
+        <h1 className="text-[93px] font-sans font-bold " >
             Flux de nouvelles
         </h1>
-        <div className="text-4xl font-sans text-[#131722]">
-            Lorem ipsum dolor sit amet consectetur. Neque lorem magna nullam a.
-        </div>
+        <h2 className="">
+        Tenez vous au courant des dernières actualités pour éclairer vos décisions
+        </h2>
     </div>
    
     <div className="container-stat flex justify-between">
@@ -66,13 +83,13 @@ return (
         </div>
 
         <div className="right flex justify-center">
-            <img src={statistique} alt="" />
+            <img src={getStatistiqueImage(selectedAction.name)} alt="" />
         </div>
     </div>
   
-  <h1>Nouveaux articles</h1>
+  <h2 className="title">Dernieres actualités</h2>
   {selectedAction.articles.map((list) => (
-        <InfoBlock time={list.time} title={list.title} />
+        <InfoBlock time={list.time} title={list.title} link={list.link} />
     ))}
    
 </div>

@@ -12,7 +12,7 @@ def getSentiment(text):
         return 'negatif'
     
 def searchWordInSetence(sentence):
-    search = ["schneider", "bitcoin", "btc", "sika"]
+    search = ["schneider", "bitcoin", "btc"]
     for word in search:
         if word in sentence:
             return word
@@ -34,7 +34,9 @@ def getarticles():
     'https://services.lesechos.fr/rss/investir-conseils-boursiers.xml',
     'https://www.abcbourse.com/rss/chroniquesrss',
     'https://www.abcbourse.com/rss/lastanalysisrss',
-    'https://www.tradingsat.com/rssbourse.xml'
+    'https://www.tradingsat.com/rssbourse.xml',
+    'https://coinjournal.net/fr/actualites/feed/',
+    'https://coinjournal.net/fr/actualites/category/marches/feed/'
 
     ]
 
@@ -65,7 +67,7 @@ def getarticles():
                     doPush = True            
                 
                 text = getText(entry.description, entry.title)
-                blob = TextBlob(text, pos_tagger=PatternTagger(), analyzer=PatternAnalyzer())
+                blob = TextBlob(entry.title, pos_tagger=PatternTagger(), analyzer=PatternAnalyzer())
                 sentiment = getSentiment(blob.sentiment[0])
                 if sentiment == 'positif':
                     statisques['totalPositifArticle'] += 1
