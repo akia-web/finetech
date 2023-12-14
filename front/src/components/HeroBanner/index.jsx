@@ -3,6 +3,7 @@ import './style.css'
 import { selectedAction } from "../../functions/api";
 import statistiqueSchneider from '../../assets/statistiques-schneider.png'
 import statistiqueBitcoin from '../../assets/statistiques-bitcoins.png'
+import marcheSchneider from '../../assets/marcheSchneider.png'
 import InfoBlock from "../InfoBlock";
 
 
@@ -64,7 +65,7 @@ return (
                 </svg>
                 <div className="flex flex-col justify-end height-100">
                     <p className="numberArticle">{numberArticle}</p>
-                    <p>Nombre d’articles en 24h</p>
+                    <p>Nombre d’articles </p>
                     
                 </div>
             </div>
@@ -92,6 +93,7 @@ return (
         <InfoBlock time={list.time} title={list.title} link={list.link} />
     ))}
    
+    <img  className="marche" src={marcheSchneider} alt="" />
 </div>
  
 

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import  Home  from "./components/Home"
 import './App.css';
 import HeroBanner from './components/HeroBanner';
+import footer from './assets/footer.png'
 
 
 import Info from './components/Info';
@@ -17,6 +18,8 @@ function App() {
         <Route path="/:action" element={<HeroBanner />} />
       </Routes>
     </BrowserRouter>
+    
+    <img className="footer" src={footer}/>
     </div>
   );
 }

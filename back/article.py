@@ -36,7 +36,9 @@ def getarticles():
     'https://www.abcbourse.com/rss/lastanalysisrss',
     'https://www.tradingsat.com/rssbourse.xml',
     'https://coinjournal.net/fr/actualites/feed/',
-    'https://coinjournal.net/fr/actualites/category/marches/feed/'
+    'https://coinjournal.net/fr/actualites/category/marches/feed/',
+    'https://coinjournal.net/fr/actualites/category/technologie/feed/',
+    'https://coinjournal.net/fr/actualites/tag/bitcoin/feed/'
 
     ]
 
