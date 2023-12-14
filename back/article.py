@@ -26,7 +26,8 @@ def getarticles():
     'https://services.lesechos.fr/rss/budget.xml',
     'https://services.lesechos.fr/rss/investir-conseils-boursiers.xml',
     'https://www.abcbourse.com/rss/chroniquesrss',
-    'https://www.abcbourse.com/rss/lastanalysisrss'
+    'https://www.abcbourse.com/rss/lastanalysisrss',
+    'https://www.tradingsat.com/rssbourse.xml'
 
     ]
 
